@@ -3,24 +3,51 @@
     /* Estilos aplicados em telas com 768px ou mais de largura */
     body {
         margin: 0;
-        background-color: gray
+        background-image: url(https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
     }
 
     article {
         height: 100vh;
+        max-height: 100vh;
         width: 70vw;
         margin: auto auto;
         background-color: rgb(255, 255, 255);
+        border-radius: 50px;
     }
-    section{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 10vh 10vw;
+
+    header {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 37%, rgba(4, 2, 58, 1) 78%, rgba(0, 212, 255, 1) 100%);
+        color: aliceblue;
+        text-transform: uppercase;
+        padding: 5px 30px;
+        border-radius: 35px 30px 0 0;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-    button, a {
+
+    section {
+        padding: 5vh 6vw;
+    }
+
+    button,
+    a {
         cursor: pointer;
     }
-    .bandeira{
-        margin: 5px;
+
+    .bandeira {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #container {
+        display: flex;
+        flex-wrap: wrap;
     }
 }

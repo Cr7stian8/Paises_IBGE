@@ -20,4 +20,7 @@
     button, a {
         cursor: pointer;
     }
+    .bandeira{
+        margin: 5px;
+    }
 }

@@ -13,7 +13,8 @@ function esconderBandeiras(){
 }
 function mostrarBandeiras(){
     const section = document.getElementById("bandeiras")
-    section.style.display = "block"
+    section.style.display = "flex"
+    section.style.flexWrap = "wrap"
     resultado.style.display = "none"
     voltar.style.display = "none"
 }

@@ -1,5 +1,16 @@
 @media screen and (min-width: 768px) {
-    nav{
+    /* tela das informações */
+    h2{
+        padding-top: 5vh;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+    p{
+        font-family: sans-serif;
+        margin-left: 10vw;
+    }
+    nav {
         display: flex;
         position: fixed;
         margin-left: 17.5vw;
@@ -9,34 +20,38 @@
         height: 100vh;
     }
 
-    nav a{
+    nav a {
         font-size: 22px;
         color: white;
         text-decoration: inherit;
     }
-    nav a:hover{
+
+    nav a:hover {
         color: rgb(172, 172, 172);
     }
 
-    article{
+    article {
         overflow: auto;
         scroll-behavior: smooth;
     }
-    article::-webkit-scrollbar{
+
+    article::-webkit-scrollbar {
         width: 0;
     }
+
     /* botão de voltar */
-    #voltar{
+    #voltar {
         color: aliceblue;
         background-color: rgb(177, 49, 49);
         font-size: large;
-        position: absolute;
-        margin-top: 2vh;
+        position: fixed;
+        margin-top: 7vh;
         margin-left: 2vw;
-        padding: 8px 20px;
-        border-radius: 8px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 6px 10px;
+        border-radius: 2px;
+        font-family: Arial, Helvetica, sans-serif
     }
+
     /* Estilos aplicados em telas com 768px ou mais de largura */
     body {
         overflow: "hidden";

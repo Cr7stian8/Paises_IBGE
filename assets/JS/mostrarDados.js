@@ -17,6 +17,15 @@ function mostrarDados(pais) {
             } catch {
                 console.log("erro no nome do país")
             }
+
+            try{
+                const capital = document.createElement("p")
+                const capitalString = data[0].governo.capital.nome
+                capital.textContent = `Capital: ${capitalString}`
+                dados.appendChild(capital)
+            }catch{
+                console.log("Não foi possível encontrar a capital")
+            }
             try {
                 const lingua = document.createElement("p")
                 const linguaString = data[0].linguas[0].nome

@@ -1,6 +1,7 @@
 // mudando tela para o resultado
 const resultado = document.getElementById("resultado")
 const voltar = document.getElementById("voltar")
+const nav = document.getElementById("navbar")
 resultado.style.display = "none"
 voltar.style.display = "none"
 
@@ -12,6 +13,7 @@ function esconderBandeiras(){
     }
     resultado.style.display = "block"
     voltar.style.display = "block"
+    nav.style.display= 'none'
 }
 function mostrarBandeiras(){
     var section = document.getElementsByClassName("bandeiras")
@@ -22,4 +24,5 @@ function mostrarBandeiras(){
     }
     resultado.style.display = "none"
     voltar.style.display = "none"
+    nav.style.display = "flex"
 }

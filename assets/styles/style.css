@@ -1,5 +1,19 @@
 
 @media screen and (min-width: 768px) {
+    nav{
+        display: flex;
+        position: fixed;
+        margin-left: 13vw;
+        margin-top: 3vh;
+        flex-direction: column;
+    }
+
+    nav a{
+        font-size: 22px;
+        color: white;
+        text-decoration: inherit;
+    }
+
     article{
         overflow: auto;
     }
@@ -39,14 +53,13 @@
     }
 
     header {
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 37%, rgba(4, 2, 58, 1) 78%, rgba(0, 212, 255, 1) 100%);
-        color: aliceblue;
+        background: #3f3d61;
+        color: #ffffff;
         text-transform: uppercase;
-        padding: 5px 30px;
-        border-radius: 35px 30px 0 0;
+        padding: 1px 10px;
+        border-radius: 5px 5px;
         margin-left: 10px;
-        margin-right: 10px;
+        width: fit-content;
     }
 
     section {

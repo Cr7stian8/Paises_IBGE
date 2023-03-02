@@ -1,11 +1,12 @@
-
 @media screen and (min-width: 768px) {
     nav{
         display: flex;
         position: fixed;
-        margin-left: 13vw;
-        margin-top: 3vh;
+        margin-left: 17.5vw;
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
     }
 
     nav a{
@@ -13,9 +14,13 @@
         color: white;
         text-decoration: inherit;
     }
+    nav a:hover{
+        color: rgb(172, 172, 172);
+    }
 
     article{
         overflow: auto;
+        scroll-behavior: smooth;
     }
     article::-webkit-scrollbar{
         width: 0;
@@ -46,10 +51,10 @@
     article {
         height: 100vh;
         max-height: 100vh;
-        width: 70vw;
+        width: 60vw;
         margin: auto auto;
-        background-color: rgb(255, 255, 255);
-        border-radius: 50px;
+        background-color: #f8e6e6;
+        border-radius: 20px;
     }
 
     header {
@@ -63,7 +68,7 @@
     }
 
     section {
-        padding: 5vh 6vw;
+        padding: 4vh 2vw;
     }
 
     button,

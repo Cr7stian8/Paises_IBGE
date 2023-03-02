@@ -28,7 +28,7 @@ function mostrarDados(pais) {
             try {
                 const area = document.createElement("p")
                 const areaString = data[0].area.total
-                area.textContent = `Área: ${areaString} m²`
+                area.textContent = `Área: ${areaString} km²`
                 dados.appendChild(area)
             } catch {
                 console.log("erro na área do país")

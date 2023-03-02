@@ -7,40 +7,57 @@ function mostrarDados(pais) {
         // comentar a linha abaixo para ver o objeto
         // .then(data => console.log(data))
         .then(data => {
-            const paisNome = document.createElement("h2")
-            const nome = data[0].nome.abreviado
-            paisNome.textContent = nome
-
-            const lingua = document.createElement("p")
-            const linguaString = data[0].linguas[0].nome
-            lingua.textContent = `Lingua falada: ${linguaString} `
-
-            const area = document.createElement("p")
-            const areaString = data[0].area.total
-            area.textContent = `Área: ${areaString} m²`
-
-            const continente = document.createElement("p")
-            const continenteString = data[0].localizacao.regiao.nome
-            continente.textContent = `Continente: ${continenteString} `
-
-            const subRegiao = document.createElement("p")
-            const subRegiaoString = data[0].localizacao['sub-regiao'].nome
-            subRegiao.textContent = `Sub-Região: ${subRegiaoString} `
-
-            const regiaoIntermediaria = document.createElement("p")
-            const regiaoIntermediariaString = data[0].localizacao['regiao-intermediaria'].nome
-            regiaoIntermediaria.textContent = `Regiao-Intermediaria: ${regiaoIntermediariaString} `
-
             // remover os elementos HTML antigos antes de inserir os novos
             dados.innerHTML = ""
-
-            // inserir os elementos HTML no elemento #resultado
-            dados.appendChild(paisNome)
-            dados.appendChild(lingua)
-            dados.appendChild(area)
-            dados.appendChild(continente)
-            dados.appendChild(subRegiao)
-            dados.appendChild(regiaoIntermediaria)
+            try {
+                const paisNome = document.createElement("h2")
+                const nome = data[0].nome.abreviado
+                paisNome.textContent = nome
+                dados.appendChild(paisNome)
+            } catch {
+                console.log("erro no nome do país")
+            }
+            try {
+                const lingua = document.createElement("p")
+                const linguaString = data[0].linguas[0].nome
+                lingua.textContent = `Lingua falada: ${linguaString} `
+                dados.appendChild(lingua)
+            } catch {
+                console.log("erro na lingua do país")
+            }
+            try {
+                const area = document.createElement("p")
+                const areaString = data[0].area.total
+                area.textContent = `Área: ${areaString} m²`
+                dados.appendChild(area)
+            } catch {
+                console.log("erro na área do país")
+            }
+            try {
+                const continente = document.createElement("p")
+                const continenteString = data[0].localizacao.regiao.nome
+                continente.textContent = `Continente: ${continenteString} `
+                dados.appendChild(continente)
+            } catch {
+                console.log("erro no continente")
+            }
+            try {
+                const subRegiao = document.createElement("p")
+                const subRegiaoString = data[0].localizacao['sub-regiao'].nome
+                subRegiao.textContent = `Sub-Região: ${subRegiaoString} `
+                dados.appendChild(subRegiao)
+            }
+            catch {
+                console.log("erro na subregião")
+            }
+            try {
+                const regiaoIntermediaria = document.createElement("p")
+                const regiaoIntermediariaString = data[0].localizacao['regiao-intermediaria'].nome
+                regiaoIntermediaria.textContent = `Regiao-Intermediaria: ${regiaoIntermediariaString} `
+                dados.appendChild(regiaoIntermediaria)
+            } catch {
+                console.log("erro na regiãoIntermediaria")
+            }
         })
-        .catch(error => console.error("Apareceu esse erro aqui, se vira" ,error))
+        .catch(error => console.error("Apareceu esse erro aqui, se vira", error))
 }

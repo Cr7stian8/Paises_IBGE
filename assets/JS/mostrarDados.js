@@ -17,6 +17,15 @@ function mostrarDados(pais) {
             } catch {
                 console.log("erro no nome do país")
             }
+            try {
+                const botaoHistoria = document.createElement("button")
+                botaoHistoria.textContent = "ver história"
+                botaoHistoria.id = "botaoHistoria"
+                botaoHistoria.onclick =
+                dados.appendChild(botaoHistoria)
+            } catch (error) {
+                console.log("erro com o botão da história")
+            }
 
             try{
                 const capital = document.createElement("p")

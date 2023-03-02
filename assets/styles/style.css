@@ -1,7 +1,26 @@
-@media screen and (min-width: 768px) {
 
+@media screen and (min-width: 768px) {
+    article{
+        overflow: auto;
+    }
+    article::-webkit-scrollbar{
+        width: 0;
+    }
+    /* botão de voltar */
+    #voltar{
+        color: aliceblue;
+        background-color: rgb(177, 49, 49);
+        font-size: large;
+        position: absolute;
+        margin-top: 2vh;
+        margin-left: 2vw;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     /* Estilos aplicados em telas com 768px ou mais de largura */
     body {
+        overflow: "hidden";
         margin: 0;
         background-image: url(https://images.unsplash.com/photo-1622737133809-d95047b9e673?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80);
         -webkit-background-size: cover;

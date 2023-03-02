@@ -4,17 +4,22 @@ const voltar = document.getElementById("voltar")
 resultado.style.display = "none"
 voltar.style.display = "none"
 
-
 function esconderBandeiras(){
-    const section = document.getElementById("bandeiras")
-    section.style.display = "none"
+    var section = document.getElementsByClassName("bandeiras")
+    var i
+    for (i = 0; i < section.length; i++) {
+        section[i].style.display = 'none'
+    }
     resultado.style.display = "block"
     voltar.style.display = "block"
 }
 function mostrarBandeiras(){
-    const section = document.getElementById("bandeiras")
-    section.style.display = "block"
-    section.style.flexWrap = "wrap"
+    var section = document.getElementsByClassName("bandeiras")
+    var i
+    for (i = 0; i < section.length; i++) {
+        section[i].style.display = "block"
+        section[i].style.flexWrap = "wrap"
+    }
     resultado.style.display = "none"
     voltar.style.display = "none"
 }

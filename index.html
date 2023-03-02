@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBGE-pesquisas</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <!-- article vai ocupar 70% para computador -->
+    <article>
+        <!-- section só uma margin pras coisas não ficar coladas -->
+        <section id="bandeiras">
+            <div class="bandeira">
+                <a onclick="esconderBandeiras();mostrarDados('BR')">
+                    <img src="assets/bandeiras/brazil.svg" alt="Bandeira do Brasil">
+                </a>
+            </div>
+        </section>
+        <button id='voltar' onclick="mostrarBandeiras()">Voltar</button>
+        <!-- section do resultado -->
+        <section id="resultado">
+
+        </section>
+    </article>
+    <script src="assets/JS/mudaTela.js"></script>
+    <script src="assets/JS/mostrarDados.js"></script>
+</body>
+</html>

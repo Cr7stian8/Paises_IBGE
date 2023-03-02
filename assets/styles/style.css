@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+
+    /* Estilos aplicados em telas com 768px ou mais de largura */
+    body {
+        margin: 0;
+        background-color: gray
+    }
+
+    article {
+        height: 100vh;
+        width: 70vw;
+        margin: auto auto;
+        background-color: rgb(255, 255, 255);
+    }
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10vh 10vw;
+    }
+    button, a {
+        cursor: pointer;
+    }
+}

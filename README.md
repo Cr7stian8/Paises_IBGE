@@ -1,4 +1,4 @@
-# 🌎📊📈 Consumo de API do IBGE 🌐🧑‍🤝‍🧑📜🔍🖼️📜
+# 🌎📊📈 Consumo de API do IBGE 🌐🤝🔍
 
 Este projeto tem como objetivo consumir a API de países do IBGE para obter informações relevantes. 🔍🌍📈
 

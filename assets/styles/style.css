@@ -1,5 +1,9 @@
 @media screen and (min-width: 768px) {
     /* tela das informações */
+    #textoHistoria{
+        margin:2vw 5vw !important;
+        line-height: 25px;
+    }
     #botaoHistoria{
         display: flex ;
         margin: auto auto;

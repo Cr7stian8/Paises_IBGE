@@ -21,7 +21,7 @@ function mostrarDados(pais) {
                 const botaoHistoria = document.createElement("button")
                 botaoHistoria.textContent = "ver história"
                 botaoHistoria.id = "botaoHistoria"
-                botaoHistoria.onclick =
+                botaoHistoria.onclick = () => mostraHistoria(data)
                 dados.appendChild(botaoHistoria)
             } catch (error) {
                 console.log("erro com o botão da história")
@@ -38,7 +38,7 @@ function mostrarDados(pais) {
             try {
                 const lingua = document.createElement("p")
                 const linguaString = data[0].linguas[0].nome
-                lingua.textContent = `Lingua falada: ${linguaString} `
+                lingua.textContent = `Lingua falada: ${linguaString}`
                 dados.appendChild(lingua)
             } catch {
                 console.log("erro na lingua do país")
@@ -62,7 +62,7 @@ function mostrarDados(pais) {
             try {
                 const subRegiao = document.createElement("p")
                 const subRegiaoString = data[0].localizacao['sub-regiao'].nome
-                subRegiao.textContent = `Sub-Região: ${subRegiaoString} `
+                subRegiao.textContent = `Sub-Região: ${subRegiaoString}`
                 dados.appendChild(subRegiao)
             }
             catch {
@@ -78,4 +78,27 @@ function mostrarDados(pais) {
             }
         })
         .catch(error => console.error("Apareceu esse erro aqui, se vira", error))
+}
+function mostraHistoria(data){
+    // limpando tela
+    resultado.innerHTML = ""
+    try {
+        const paisNome = document.createElement("h2")
+        const nome = data[0].nome.abreviado
+        paisNome.textContent = `história - ${nome}`
+        dados.appendChild(paisNome)
+    } catch {
+        console.log("erro no nome do país")
+    }
+    // nome do pais
+    try {
+        const historia = document.createElement("p")
+        const historiaString = data[0].historico
+        historia.textContent = historiaString
+        historia.id = "textoHistoria"
+        const sectionR = document.getElementById("resultado")
+        sectionR.appendChild(historia)
+    } catch {
+        alert("deu ruim")
+    }
 }

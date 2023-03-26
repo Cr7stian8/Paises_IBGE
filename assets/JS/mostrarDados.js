@@ -1,5 +1,52 @@
 const dados = document.getElementById("resultado")
+const paisesA = ['AF', 'ZA', 'AL', 'DE', 'AD', 'AO', 'AG', 'SA', 'DZ', 'AR', 'AM', 'AU', 'AT', 'AZ']
 
+//
+// criar um array com as informações das bandeiras
+const a1 = [
+    { pais: "AF", bandeira: "assets/bandeiras/afeganistao.svg" },
+    { pais: "ZA", bandeira: "assets/bandeiras/africaSul.svg" },
+    { pais: "AL", bandeira: "assets/bandeiras/albânia.svg" },
+    { pais: "DE", bandeira: "assets/bandeiras/alemanha.svg" },
+    { pais: "AO", bandeira: "assets/bandeiras/andorra.svg" },
+    { pais: "AG", bandeira: "assets/bandeiras/angola.svg" },
+    { pais: "SA", bandeira: "assets/bandeiras/barbuda.svg" },
+    { pais: "DZ", bandeira: "assets/bandeiras/arabia.svg" },
+    { pais: "AR", bandeira: "assets/bandeiras/argelia.svg" },
+    { pais: "AM", bandeira: "assets/bandeiras/armenia.svg" },
+    { pais: "AU", bandeira: "assets/bandeiras/australia.svg" },
+    { pais: "AT", bandeira: "assets/bandeiras/austria.svg" },
+    { pais: "AZ", bandeira: "assets/bandeiras/azerbaijao.svg" },
+];
+
+// função para criar os elementos HTML das bandeiras e adicionar eventos de clique
+function criarBandeiras(letra,array) {
+    const bandeirasDiv = document.getElementById(letra);
+
+    array.forEach(bandeira => {
+        const bandeiraDiv = document.createElement("div");
+        bandeiraDiv.className = "bandeira";
+
+        const link = document.createElement("a");
+        link.onclick = () => {
+            esconderBandeiras();
+            mostrarDados(bandeira.pais);
+        }
+
+        const img = document.createElement("img");
+        img.src = bandeira.bandeira;
+
+        link.appendChild(img);
+        bandeiraDiv.appendChild(link);
+        bandeirasDiv.appendChild(bandeiraDiv);
+    });
+}
+
+// chame a função para criar as bandeiras
+criarBandeiras('a1',a1);
+
+
+//
 function mostrarDados(pais) {
     const dados = document.getElementById("resultado")
     fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${pais}`)
@@ -27,12 +74,12 @@ function mostrarDados(pais) {
                 console.log("erro com o botão da história")
             }
 
-            try{
+            try {
                 const capital = document.createElement("p")
                 const capitalString = data[0].governo.capital.nome
                 capital.textContent = `Capital: ${capitalString}`
                 dados.appendChild(capital)
-            }catch{
+            } catch {
                 console.log("Não foi possível encontrar a capital")
             }
             try {
@@ -79,7 +126,7 @@ function mostrarDados(pais) {
         })
         .catch(error => console.error("Apareceu esse erro aqui, se vira", error))
 }
-function mostraHistoria(data){
+function mostraHistoria(data) {
     // limpando tela
     resultado.innerHTML = ""
     try {
